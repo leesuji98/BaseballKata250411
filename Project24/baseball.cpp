@@ -7,6 +7,7 @@ using std::exception;
 class Baseball {
 public:
 	void guess(const string& string) {
-		throw std::length_error("Must be three letters.");
+		if (string.length() != 3)
+			throw std::length_error("Must be three letters.");
 	}
 };
